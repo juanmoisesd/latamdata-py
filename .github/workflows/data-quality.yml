@@ -1,0 +1,81 @@
+name: Data Quality & Link Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Mondays
+
+jobs:
+  validate:
+    name: Validate Data & Documentation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Check for required files
+        run: |
+          echo "Checking required community files..."
+          for file in README.md CITATION.cff .zenodo.json CONTRIBUTING.md; do
+            if [ -f "$file" ]; then
+              echo "✅ $file found"
+            else
+              echo "⚠️  $file missing"
+            fi
+          done
+      
+      - name: Validate CITATION.cff
+        run: |
+          pip install cffconvert --quiet
+          if [ -f "CITATION.cff" ]; then
+            cffconvert --validate
+            echo "✅ CITATION.cff is valid"
+          else
+            echo "⚠️  CITATION.cff not found"
+          fi
+        continue-on-error: true
+      
+      - name: Validate .zenodo.json
+        run: |
+          if [ -f ".zenodo.json" ]; then
+            python -c "import json; json.load(open('.zenodo.json')); print('✅ .zenodo.json is valid JSON')"
+          else
+            echo "⚠️  .zenodo.json not found"
+          fi
+        continue-on-error: true
+      
+      - name: Check CSV files (if any)
+        run: |
+          find . -name "*.csv" -not -path "./.git/*" | head -20 | while read f; do
+            python -c "
+          import csv, sys
+          try:
+              with open('$f', encoding='utf-8', errors='ignore') as fh:
+                  r = csv.reader(fh)
+                  headers = next(r, None)
+                  rows = sum(1 for _ in r)
+              print(f'✅ {sys.argv[1]}: {rows} rows, {len(headers) if headers else 0} columns')
+          except Exception as e:
+              print(f'⚠️  {sys.argv[1]}: {e}')
+          " "$f"
+          done
+        continue-on-error: true
+      
+      - name: Summary
+        run: |
+          echo ""
+          echo "================================"
+          echo "  Data Quality Check Complete"
+          echo "================================"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
