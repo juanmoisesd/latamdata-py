@@ -1,0 +1,11 @@
+include README.md
+include LICENSE
+include CITATION.cff
+include .zenodo.json
+include codemeta.json
+include requirements.txt
+recursive-include latamdata *.py
+recursive-include tests *.py
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
