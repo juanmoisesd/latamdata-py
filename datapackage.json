@@ -1,0 +1,36 @@
+{
+  "name": "latamdata-py",
+  "title": "latamdata-py: Latin America Research Datasets Package",
+  "description": "Python package with 38+ open research datasets from Latin America.",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0 Universal",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "keywords": [
+    "python",
+    "latin america",
+    "open data",
+    "research datasets"
+  ],
+  "contributors": [
+    {
+      "title": "Juan Moisés de la Serna Tuya",
+      "email": "jmsernatuya@gmail.com",
+      "role": "author",
+      "organization": "Universidad Internacional de La Rioja (UNIR)",
+      "orcid": "https://orcid.org/0000-0002-8401-8018"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GitHub Repository",
+      "path": "https://github.com/juanmoisesd/latamdata-py"
+    }
+  ],
+  "homepage": "https://github.com/juanmoisesd/latamdata-py",
+  "image": "https://juanmoisesd.github.io/latamdata-py/preview.png"
+}
