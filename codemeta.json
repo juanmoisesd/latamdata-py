@@ -1,50 +1,47 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "latamdata-py",
-  "description": "Python package providing one-line access to 38+ open research datasets from Latin America covering health, demographics, education, and economics.",
-  "version": "1.0.0",
-  "dateCreated": "2024-01-01",
-  "dateModified": "2024-12-01",
+  "name": "latamdata-py: One-line access to 38 open research datasets from Latin America",
+  "description": "Python package providing one-line programmatic access to 38 open research datasets on health, neuroscience, and socioeconomic indicators from Latin America. Install via: pip install latamdata-py",
+  "identifier": "https://doi.org/10.5281/zenodo.19145316",
+  "datePublished": "2025-01-01",
+  "version": "0.1.0",
+  "license": "https://spdx.org/licenses/MIT",
   "url": "https://github.com/juanmoisesd/latamdata-py",
   "codeRepository": "https://github.com/juanmoisesd/latamdata-py",
-  "license": "https://spdx.org/licenses/CC0-1.0.html",
+  "issueTracker": "https://github.com/juanmoisesd/latamdata-py/issues",
   "author": [
     {
       "@type": "Person",
       "givenName": "Juan Moisés",
-      "familyName": "de la Serna Tuya",
-      "email": "jmsernatuya@gmail.com",
-      "@id": "https://orcid.org/0000-0002-8401-8018",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "Universidad Internacional de La Rioja (UNIR)"
-      }
+      "familyName": "Serna Tuya",
+      "email": "jmsernatuya@gmail.com"
     }
   ],
   "keywords": [
     "python",
-    "latin america",
-    "open data",
-    "research datasets",
-    "public health",
-    "demographics",
-    "data science"
+    "latin-america",
+    "open-data",
+    "datasets",
+    "neuroscience",
+    "mental-health",
+    "public-health",
+    "pip"
   ],
   "programmingLanguage": [
     {
       "@type": "ComputerLanguage",
-      "name": "Python"
+      "name": "Python",
+      "version": ">=3.8"
     }
   ],
-  "operatingSystem": [
-    "Linux",
-    "Windows",
-    "macOS"
+  "softwareRequirements": [
+    "pandas",
+    "requests"
   ],
-  "softwareRequirements": "Python >= 3.8",
-  "relatedLink": [
-    "https://orcid.org/0000-0002-8401-8018",
-    "https://juanmoisesd.github.io/research-hub/"
-  ]
+  "developmentStatus": "active",
+  "readme": "https://github.com/juanmoisesd/latamdata-py/blob/main/README.md",
+  "releaseNotes": "https://github.com/juanmoisesd/latamdata-py/blob/main/CHANGELOG.md",
+  "citation": "https://github.com/juanmoisesd/latamdata-py/blob/main/CITATION.cff",
+  "contIntegration": "https://github.com/juanmoisesd/latamdata-py/actions"
 }
