@@ -4,43 +4,67 @@ build-backend = "setuptools.backends.legacy:build"
 
 [project]
 name = "latamdata-py"
-version = "1.0.0"
-description = "One-line access to 38+ open research datasets from Latin America (neuroscience, mental health, demographics, economics)"
+version = "0.1.0"
+description = "One-line access to 38 open research datasets from Latin America"
 readme = "README.md"
-license = {text = "CC0-1.0"}
+license = {text = "MIT"}
 authors = [
-    {name = "Juan Moisés de la Serna Tuya", email = "jmsernatuya@gmail.com"}
+  {name = "Juan Moisés Serna Tuya", email = "jmsernatuya@gmail.com"}
 ]
-keywords = ["latin america", "datasets", "open data", "neuroscience", "mental health", "demographics", "economics", "research"]
+keywords = ["latin-america", "open-data", "datasets", "neuroscience", "public-health"]
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Science/Research",
-    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Scientific/Engineering",
-    "Topic :: Scientific/Engineering :: Information Analysis",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Information Analysis",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
-    "pandas>=1.3.0",
-    "requests>=2.28.0",
+  "pandas>=1.5.0",
+  "requests>=2.28.0",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.0", "black", "flake8"]
+dev = [
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "black>=23.0",
+  "flake8>=6.0",
+  "isort>=5.12",
+  "mypy>=1.0",
+  "pre-commit>=3.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/juanmoisesd/latamdata-py"
-Documentation = "https://github.com/juanmoisesd/latamdata-py#readme"
 Repository = "https://github.com/juanmoisesd/latamdata-py"
-"Bug Tracker" = "https://github.com/juanmoisesd/latamdata-py/issues"
-ORCID = "https://orcid.org/0000-0002-8401-8018"
+Issues = "https://github.com/juanmoisesd/latamdata-py/issues"
+Changelog = "https://github.com/juanmoisesd/latamdata-py/blob/main/CHANGELOG.md"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["latamdata*"]
+[tool.black]
+line-length = 88
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["latamdata"]
+omit = ["tests/*", "examples/*"]
