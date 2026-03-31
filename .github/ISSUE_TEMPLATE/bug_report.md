@@ -1,26 +1,23 @@
 ---
-name: Bug Report / Error en los datos
-about: Report incorrect data, broken links, or technical issues
+name: Bug report
+about: Report a bug in latamdata-py
 title: '[BUG] '
 labels: bug
 assignees: juanmoisesd
 ---
 
-## Describe the Bug / Describe el error
-A clear description of what the bug is.
+## Describe the bug
 
-## Expected Behavior / Comportamiento esperado
-What you expected to happen.
+## Steps to reproduce
+```python
+# code here
+```
 
-## Steps to Reproduce / Pasos para reproducir
-1. Go to '...'
-2. Click on '...'
-3. See error
+## Expected behavior
 
-## Environment / Entorno
-- Browser (if applicable):
-- Dataset version:
-- Date observed:
+## Actual behavior
 
-## Additional Context / Contexto adicional
-Add any other context, screenshots, or data samples here.
+## Environment
+- Python version:
+- latamdata-py version:
+- OS:
