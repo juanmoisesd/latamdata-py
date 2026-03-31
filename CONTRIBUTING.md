@@ -1,62 +1,46 @@
-# Contributing to latamdata-py: Python Package for Open Research Datasets from Latin America
+# Contributing to latamdata-py
 
-Thank you for your interest in contributing to **latamdata-py: Python Package for Open Research Datasets from Latin America**!
+Thank you for your interest in contributing! 🐍
 
-This repository is part of the open research of [Juan Moisés de la Serna Tuya](https://github.com/juanmoisesd) (UNIR).  
-ORCID: [0000-0002-8401-8018](https://orcid.org/0000-0002-8401-8018)
+## Development Setup
 
----
-
-## 🌍 How to Contribute
-
-### 1. Report Issues or Suggestions
-Open an [Issue](https://github.com/juanmoisesd/latamdata-py/issues) describing:
-- The problem found or improvement proposed
-- Steps to reproduce the issue (if applicable)
-- Screenshots or example data
-
-### 2. Propose Data Improvements
-If you have additional data or corrections:
-1. **Fork** this repository
-2. Create a branch: `git checkout -b improvement/description`
-3. Make your changes and document the data source
-4. Submit a **Pull Request** with a clear description
-
-### 3. Improve Documentation
-Typo corrections, translations, or README improvements are welcome.
-
----
-
-## 📋 Quality Standards
-
-- Data must come from **verifiable and citable sources**
-- Include references to the original source (DOI, URL, institution)
-- CSV files should have headers in English
-- Metadata should follow the [FAIR principles](https://www.go-fair.org/)
-
----
-
-## 📝 Cite this Repository
-
-If you use this data in your research, please cite it:
-
-```bibtex
-@misc{delaserna_latamdata_py,
-  author    = {de la Serna Tuya, Juan Moisés},
-  title     = {latamdata-py: Python Package for Open Research Datasets from Latin America},
-  year      = {2024},
-  publisher = {GitHub},
-  url       = {https://github.com/juanmoisesd/latamdata-py},
-  orcid     = {0000-0002-8401-8018}
-}
+```bash
+git clone https://github.com/juanmoisesd/latamdata-py.git
+cd latamdata-py
+pip install -e ".[dev]"
+pre-commit install
 ```
 
----
+## Ways to Contribute
 
-## ⚖️ License
+### 🗃️ Add a Dataset
+- Open a [feature request](../../issues/new?template=feature_request.md)
+- Include: dataset name, source URL, DOI, description, and sample access code
 
-By contributing, you agree that your contributions will be published under the [CC0 1.0 Universal](LICENSE) license.
+### 🐛 Report a Bug
+- Use the [bug report template](../../issues/new?template=bug_report.md)
+- Include Python version, OS, and steps to reproduce
 
----
+### 💻 Code Contributions
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/add-new-dataset`
+3. Write tests in `tests/`
+4. Ensure `pytest` and `flake8` pass
+5. Open a Pull Request
 
-*Questions? Contact via [GitHub Issues](https://github.com/juanmoisesd/latamdata-py/issues).*
+## Code Style
+- Format with **black**: `black .`
+- Lint with **flake8**: `flake8 .`
+- Sort imports with **isort**: `isort .`
+- Pre-commit hooks handle this automatically
+
+## Running Tests
+```bash
+pytest tests/ -v
+```
+
+## Code of Conduct
+See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## Citation
+See [CITATION.cff](CITATION.cff).
