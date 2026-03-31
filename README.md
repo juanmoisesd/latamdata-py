@@ -45,3 +45,26 @@ Public Domain (CC0 1.0). Free to use, share and modify without restrictions.
 ---
 
 **Juan Moisés de la Serna Tuya** · UNIR · [ORCID](https://orcid.org/0000-0002-8401-8018) · [GitHub](https://github.com/juanmoisesd) · [ResearchGate](https://www.researchgate.net/profile/Juan-Moises-De-La-Serna-Tuya)
+
+
+## 📖 Citation
+
+If you use latamdata-py in your research, please cite:
+
+**APA:**
+Serna Tuya, J. M. (2025). *latamdata-py: Python library for accessing open datasets on Latin America* (Version 1.0.0) [Software]. PyPI. https://pypi.org/project/latamdata-py/
+
+**Chicago:**
+Serna Tuya, Juan Moisés. "latamdata-py: Python Library for Accessing Open Datasets on Latin America." Version 1.0.0. PyPI, 2025. https://pypi.org/project/latamdata-py/.
+
+**BibTeX:**
+```bibtex
+@software{sernatuya_2025_latamdata,
+  author    = {Serna Tuya, Juan Moisés},
+  title     = {latamdata-py: Python library for accessing open datasets on Latin America},
+  year      = {2025},
+  version   = {1.0.0},
+  publisher = {PyPI},
+  url       = {https://pypi.org/project/latamdata-py/}
+}
+```
