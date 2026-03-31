@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Serna Tuya"
+    given-names: "Juan Moisés"
+    email: "jmsernatuya@gmail.com"
+    affiliation: "Independent Researcher"
+title: "latamdata-py: One-line access to 38 open research datasets from Latin America"
+version: "0.1.0"
+doi: 10.5281/zenodo.19145316
+date-released: "2025-01-01"
+url: "https://github.com/juanmoisesd/latamdata-py"
+repository-code: "https://github.com/juanmoisesd/latamdata-py"
+license: MIT
+keywords:
+  - python
+  - latin-america
+  - open-data
+  - datasets
+  - neuroscience
+  - mental-health
+  - public-health
+  - data-access
+abstract: >
+  Python package providing one-line programmatic access to 38 open research
+  datasets on health, neuroscience, and socioeconomic indicators from Latin
+  America. Install via pip: pip install latamdata-py.
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Serna Tuya"
+      given-names: "Juan Moisés"
+  title: "latamdata-py: One-line access to 38 open research datasets from Latin America"
+  year: 2025
+  url: "https://github.com/juanmoisesd/latamdata-py"
+  doi: 10.5281/zenodo.19145316
