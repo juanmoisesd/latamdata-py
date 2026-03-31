@@ -1,0 +1,37 @@
+NOTICE — Third-Party Attributions
+===================================
+
+Project: latamdata-py — Python library for Latin America open datasets
+Author:  Juan Moisés de la Serna Tuya (UNIR)
+ORCID:   https://orcid.org/0000-0002-8401-8018
+License: MIT License
+
+Third-Party Libraries
+---------------------
+This software uses the following open-source packages:
+
+1. pandas — BSD 3-Clause License
+   Copyright (c) 2008-2011, AQR Capital Management, LLC
+   https://pandas.pydata.org/
+
+2. requests — Apache 2.0 License
+   Copyright 2019 Kenneth Reitz
+   https://docs.python-requests.org/
+
+3. numpy — BSD 3-Clause License
+   Copyright (c) 2005-2023, NumPy Developers
+   https://numpy.org/
+
+Data Accessed via This Library
+--------------------------------
+Datasets accessed through latamdata-py are published under
+CC BY 4.0 and hosted on Zenodo, Harvard Dataverse, and Mendeley Data.
+Each dataset must be cited individually using its own DOI.
+
+Attribution Requirement
+-----------------------
+If you use latamdata-py in published research, please cite:
+
+  Serna Tuya, J. M. (2025). latamdata-py: Python library for accessing
+  open datasets on Latin America (v1.0.0). PyPI.
+  https://pypi.org/project/latamdata-py/
