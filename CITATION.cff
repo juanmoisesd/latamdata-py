@@ -5,11 +5,11 @@ authors:
   - family-names: "Serna Tuya"
     given-names: "Juan Moisés"
     email: "jmsernatuya@gmail.com"
-    affiliation: "Independent Researcher"
+    affiliation: "Universidad Internacional de La Rioja (UNIR)"
 title: "latamdata-py: One-line access to 38 open research datasets from Latin America"
-version: "0.1.0"
+version: "1.0.0"
 doi: 10.5281/zenodo.19145316
-date-released: "2025-01-01"
+date-released: "2026-03-31"
 url: "https://github.com/juanmoisesd/latamdata-py"
 repository-code: "https://github.com/juanmoisesd/latamdata-py"
 license: MIT
@@ -32,6 +32,6 @@ preferred-citation:
     - family-names: "Serna Tuya"
       given-names: "Juan Moisés"
   title: "latamdata-py: One-line access to 38 open research datasets from Latin America"
-  year: 2025
+  year: 2026
   url: "https://github.com/juanmoisesd/latamdata-py"
   doi: 10.5281/zenodo.19145316
