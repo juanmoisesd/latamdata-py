@@ -6,14 +6,15 @@ on:
     branches: [ main, master ]
   schedule:
     - cron: '0 9 * * 1'
+  workflow_dispatch:
 
 jobs:
   check-links:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
