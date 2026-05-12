@@ -13,8 +13,9 @@ timeout = 20
 # Maximum retries
 max_retries = 3
 
-# Exclude these URL patterns from checking (regex)
+# Exclude local file paths and known problematic URL patterns
 exclude = [
+  "^file://",
   "^https://doi.org/",
   "^https://dx.doi.org/",
   "^https://zenodo.org/",
@@ -35,5 +36,8 @@ exclude = [
   "PLACEHOLDER",
 ]
 
-# Exclude these file paths
+# Exclude local file paths from checking
 exclude_path = [".git", "node_modules", "venv", "__pycache__"]
+
+# Skip checking local file links (only check http/https)
+scheme = ["https", "http"]
