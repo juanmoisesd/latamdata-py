@@ -13,13 +13,14 @@ timeout = 20
 # Maximum retries
 max_retries = 3
 
-# Exclude known problematic URL patterns from checking
+# Exclude known problematic URL patterns
 exclude = [
   "^file://",
   "^https://doi.org/",
   "^https://dx.doi.org/",
   "^https://zenodo.org/",
   "^https://dataverse.harvard.edu/",
+  "^https://juanmoisesd.github.io/",
   "^https://github.com/.*/issues/new",
   "^https://github.com/.*/compare/",
   "^https://github.com/.*/releases/tag/",
@@ -30,6 +31,7 @@ exclude = [
   "^https://t.co/",
   "^https://badge.fury.io/",
   "^https://img.shields.io/",
+  "^https://codecov.io/",
   "^mailto:",
   "^#",
   "example.com",
@@ -37,7 +39,7 @@ exclude = [
   "PLACEHOLDER",
 ]
 
-# Exclude local file paths from checking
+# Exclude local file paths
 exclude_path = [".git", "node_modules", "venv", "__pycache__"]
 
 # Only check http/https links
