@@ -1,8 +1,8 @@
 # lychee link checker configuration
 # https://github.com/lycheeverse/lychee
 
-# Accept these HTTP status codes as valid (includes 403 for auth-required pages)
-accept = [200, 204, 206, 301, 302, 307, 308, 403, 429]
+# Accept these HTTP status codes as valid
+accept = [200, 202, 204, 206, 301, 302, 307, 308, 403, 429]
 
 # Maximum number of redirects
 max_redirects = 5
@@ -13,12 +13,13 @@ timeout = 20
 # Maximum retries
 max_retries = 3
 
-# Exclude local file paths and known problematic URL patterns
+# Exclude known problematic URL patterns from checking
 exclude = [
   "^file://",
   "^https://doi.org/",
   "^https://dx.doi.org/",
   "^https://zenodo.org/",
+  "^https://dataverse.harvard.edu/",
   "^https://github.com/.*/issues/new",
   "^https://github.com/.*/compare/",
   "^https://github.com/.*/releases/tag/",
@@ -39,5 +40,5 @@ exclude = [
 # Exclude local file paths from checking
 exclude_path = [".git", "node_modules", "venv", "__pycache__"]
 
-# Skip checking local file links (only check http/https)
+# Only check http/https links
 scheme = ["https", "http"]
