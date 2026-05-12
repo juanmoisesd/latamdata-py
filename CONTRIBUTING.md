@@ -1,6 +1,6 @@
 # Contributing to latamdata-py
 
-Thank you for your interest in contributing! 🐍
+Thank you for your interest in contributing! ð
 
 ## Development Setup
 
@@ -13,15 +13,15 @@ pre-commit install
 
 ## Ways to Contribute
 
-### 🗃️ Add a Dataset
-- Open a [feature request](../../issues/new?template=feature_request.md)
+### ðï¸ Add a Dataset
+- Open a [feature request](https://github.com/juanmoisesd/latamdata-py/issues/new?template=feature_request.md)
 - Include: dataset name, source URL, DOI, description, and sample access code
 
-### 🐛 Report a Bug
-- Use the [bug report template](../../issues/new?template=bug_report.md)
+### ð Report a Bug
+- Use the [bug report template](https://github.com/juanmoisesd/latamdata-py/issues/new?template=bug_report.md)
 - Include Python version, OS, and steps to reproduce
 
-### 💻 Code Contributions
+### ð» Code Contributions
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/add-new-dataset`
 3. Write tests in `tests/`
