@@ -22,24 +22,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --max-retries 3
-            --timeout 20
-            --accept 200,204,206,301,302,403,429
-            --exclude-path .git
-            --exclude "^https://doi\.org/"
-            --exclude "^https://dx\.doi\.org/"
-            --exclude "^https://zenodo\.org/"
-            --exclude "^https://twitter\.com/"
-            --exclude "^https://x\.com/"
-            --exclude "^https://linkedin\.com/"
-            --exclude "^https://www\.linkedin\.com/"
-            --exclude "^https://t\.co/"
-            --exclude "^https://pypi\.org/"
-            --exclude "^mailto:"
-            --exclude "^#"
-            --exclude "CHANGELOG_URL_PLACEHOLDER"
-            --exclude "YOUR_"
-            --exclude "example\.com"
+            --config lychee.toml
             '**/*.md'
           fail: true
           jobSummary: true
