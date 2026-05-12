@@ -1,0 +1,59 @@
+# lychee link checker configuration
+# https://github.com/lycheeverse/lychee
+
+# Accept these HTTP status codes as valid
+accept = [200, 204, 206, 301, 302, 307, 308, 403, 429]
+
+# Maximum number of redirects
+max_redirects = 5
+
+# Timeout in seconds
+timeout = 20
+
+# Maximum retries
+max_retries = 3
+
+# Exclude these URL patterns from checking
+exclude = [
+  # DOI resolvers (redirect, often return 403 to bots)
+  "^https://doi\.org/",
+  "^https://dx\.doi\.org/",
+
+  # Zenodo (rate-limits bots)
+  "^https://zenodo\.org/",
+
+  # GitHub issue/PR creation links (require auth)
+  "^https://github\.com/.*/issues/new",
+  "^https://github\.com/.*/compare/",
+  "^https://github\.com/.*/releases/tag/",
+
+  # Social media (block bots)
+  "^https://twitter\.com/",
+  "^https://x\.com/",
+  "^https://linkedin\.com/",
+  "^https://www\.linkedin\.com/",
+  "^https://t\.co/",
+
+  # PyPI badge (sometimes flaky)
+  "^https://badge\.fury\.io/",
+  "^https://img\.shields\.io/",
+
+  # Mail links
+  "^mailto:",
+
+  # Fragment-only links
+  "^#",
+
+  # Placeholder patterns
+  "example\.com",
+  "YOUR_",
+  "PLACEHOLDER",
+]
+
+# Exclude these file paths
+exclude_path = [
+  ".git",
+  "node_modules",
+  "venv",
+  "__pycache__",
+]
